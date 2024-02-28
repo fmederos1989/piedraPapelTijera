@@ -36,6 +36,8 @@
             playerScore = 0;
             computerScore = 0;
             console.log(computerScore, playerScore);
+            textoInformativo.textContent = '';
+            resultados.textContent = '';
         })
         
         
