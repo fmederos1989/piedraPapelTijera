@@ -38,18 +38,32 @@
             console.log(computerScore, playerScore);
             textoInformativo.textContent = '';
             resultados.textContent = '';
+            selectPiedra.disabled = false;
+            selectPapel.disabled = false;
+            selectTijera.disabled = false;
         })
         
         
         function finalResult(){
             if(playerScore === 5 || computerScore === 5){
-                if (computerScore > playerScore){
-                    textoInformativo.textContent = `LA CPU ha ganado 5 rondas antes que tu 😆`
-                }else (playerScore > computerScore);
-                textoInformativo.textContent = `Felicitaciones has ganado 5 rondas antes que la CPU 😎`
+
+                if(computerScore > playerScore){
+                    textoInformativo.textContent = `LA CPU ha ganado 5 rondas antes que tu 😆`;
+                    disabledButton();
+                }else if(playerScore > computerScore){
+                    textoInformativo.textContent = `Felicitaciones has ganado 5 rondas antes que la CPU 😎`;
+                    disabledButton();
+                }else{
+                }
             }else;
+            
         }
-    
+
+        function disabledButton (){
+            selectPapel.disabled = true;
+            selectPiedra.disabled = true;
+            selectTijera.disabled = true;
+        }        
         
 
         // Genera un numero random para la CPU
