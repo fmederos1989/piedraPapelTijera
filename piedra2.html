@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="jugar(0)">piedra</button>
+    <button onclick="jugar(1)">papel</button>
+    <button onclick="jugar(2)">tijera</button>
+</body>
+<script>
+
+let matriz = [
+    ["e","g","p"],
+    ["p","e","g"],
+    ["g","p","e"]
+]
+
+        let opciones = ["piedra", "papel", "tijera"]
+
+        function jugar(params) {
+            let random = Math.floor(Math.random()*3)
+            alert((matriz[random][params] === "e" ? "empataste" : matriz[random][params] === "g" ? "ganaste" : "perdiste" ) + "porque elegiste " + opciones[params] + " y la maquina elegio " + opciones[random])  
+        }
+
+let matrizDos = [
+    ["x","o",""],
+    ["p","e","g"],
+    ["g","p","e"]
+]
+
+function tateti() {
+    if(matriz[0][0] == matriz[0][1] == matriz[0][2] && matriz[0][0] != ""){
+        alert("gano las " + matriz[0])
+    }else if(matriz[1][0] == matriz[1][1] == matriz[1][2] && matriz[1][0] != ""){
+}
+//se fija si el arbol contiene algo
+//si no contiene preguntar primer personaje
+//si contiene y es hoja preguntar si es el personaje
+//si es rama, pregunta caracteristica
+</script>
+</html>
+
+
+
+
+

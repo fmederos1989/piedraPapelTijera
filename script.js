@@ -68,7 +68,7 @@
 
         // Genera un numero random para la CPU
         function getComputerChoice(){
-            var computerChoice = Math.floor(Math.random()*3)+1;
+                var computerChoice = Math.floor(Math.random()*3)+1;
             if(computerChoice == 1){
                 return 'PIEDRA'
             }else if(computerChoice == 2){
